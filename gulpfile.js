@@ -12,6 +12,11 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 // babel 插件;
 var babel = require("gulp-babel");
+// css 插件;
+var cleanCss = require("gulp-clean-css");
+// sass 编译插件;
+var sass = require("gulp-sass-china");
+
 
 
 
@@ -41,7 +46,8 @@ gulp.task("html",()=>{
 })
 
 gulp.task("watch",()=>{
-    gulp.watch("index.html",["html"])
+    gulp.watch("index.html",["html"]);
+    gulp.watch("sass/*.scss",["html","sass"]);
 })
 
 
@@ -66,4 +72,10 @@ gulp.task("es6",()=>{
         presets: ['@babel/env']
     }))
     .pipe(gulp.dest("dist/script"));
+})
+
+gulp.task("sass", () =>{
+    return gulp.src(["sass/*.scss"])
+           .pipe(sass().on("error",sass.logError))
+           .pipe(gulp.dest("dist/css"))
 })

@@ -1,0 +1,117 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.shopCar {
+  height: 40px;
+  padding: 20px;
+  background: #ddd; }
+  .shopCar .empty {
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+    background-image: url(../images/car1.png);
+    background-size: 40px 40px;
+    position: relative; }
+    .shopCar .empty.full {
+      background-image: url(../images/car2.png); }
+    .shopCar .empty span {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      background: #fff;
+      border-radius: 50%;
+      line-height: 40px;
+      text-align: center; }
+    .shopCar .empty .goods-list {
+      width: 180px;
+      position: absolute;
+      top: 40px; }
+      .shopCar .empty .goods-list li {
+        width: 180px;
+        height: 60px;
+        background: rgba(0, 0, 0, 0.5); }
+        .shopCar .empty .goods-list li img {
+          height: 60px;
+          float: left; }
+        .shopCar .empty .goods-list li h3 {
+          float: left;
+          line-height: 60px;
+          padding-left: 10px; }
+        .shopCar .empty .goods-list li strong {
+          display: block;
+          float: left;
+          line-height: 60px;
+          padding: 0 5px;
+          color: yellowgreen; }
+
+.container {
+  width: 1120px;
+  margin: 0 auto; }
+  .container ul li {
+    width: 224px;
+    height: 405px;
+    float: left;
+    text-align: center;
+    box-shadow: 0 0 5px #ddd;
+    border-radius: 10px;
+    overflow: hidden; }
+    .container ul li h3 {
+      line-height: 40px;
+      text-align: left; }
+    .container ul li img {
+      display: block;
+      width: 224px;
+      height: 340px; }
+    .container ul li button {
+      width: 100%;
+      border-radius: 5px;
+      background: none;
+      border: 1px solid #ddd;
+      background: yellowgreen;
+      color: #fff; }

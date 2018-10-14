@@ -1,0 +1,6 @@
+$rootsize:16px;
+
+@function Torem($px){
+    @return ($px/$rootsize)*1rem;
+
+}

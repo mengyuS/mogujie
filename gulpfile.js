@@ -12,6 +12,10 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
 // babel 插件;
 var babel = require("gulp-babel");
+// css 插件;
+var cleanCss = require("gulp-clean-css");
+//sass 编译插件
+var sass = require("gulp-sass-china")
 
 
 
@@ -25,6 +29,8 @@ gulp.task('connect',function(){
         //livereload  是否同步刷新
         livereload:true,
         // 中间件;   反向代理
+        // 如何发起一个代理请求 : 
+        // localhost:8888/proxy/目标;
         middleware:function(connect , opt){
             var Proxy = require('gulp-connect-proxy');
             opt.route = '/proxy';
@@ -40,8 +46,10 @@ gulp.task("html",()=>{
     return gulp.src("*.html").pipe(gulp.dest("dist/")).pipe(connect.reload());
 })
 
+//同步刷新    index.html改变就触发html,dist里面的index.html也改变；
 gulp.task("watch",()=>{
-    gulp.watch("index.html",["html"])
+    gulp.watch("index.html",["html","sass"]);
+    gulp.watch("sass/*.scss",["html","sass"])
 })
 
 
@@ -55,15 +63,28 @@ gulp.task("script",()=>{
     .pipe(gulp.dest("dist/"));
 })
 
-// gulp.task("es6",()=>{
-//     return gulp.src("script/es2015/es6.js")
-//     .pipe(babel())
-//     .pipe(gulp.dest("dist/script"));
-// })
+// 编译 ? es6 => es5;
 gulp.task("es6",()=>{
     return gulp.src("script/es2015/es6.js")
     .pipe(babel({
         presets: ['@babel/env']
     }))
     .pipe(gulp.dest("dist/script"));
+})
+
+
+//压缩css文件
+gulp.task("css",()=>{
+    return gulp.src(["styles/*.css"])
+    .pipe(cleanCss())
+    .pipe(gulp.dest("dist/css"))
+})
+
+//scss编译css
+gulp.task("sass",()=>{
+    return gulp.src(["sass/*.scss"])
+    //.on("error",sass.logError)) 报错不停止编译；
+    .pipe(sass().on("error",sass.logError))
+    .pipe(gulp.dest("dist/css"))
+
 })

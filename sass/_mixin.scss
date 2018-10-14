@@ -1,0 +1,32 @@
+// @mixin transform {
+//     -webkit-transform: rotate(30deg);
+//     -ms-transform: rotate((30deg));
+//     -moz-transform: rotate((30deg));
+//     transform: rotate((30deg));
+    
+// }
+
+
+// @mixin transform ($a){
+//     -webkit-transform: $a;
+//     -ms-transform: $a;
+//     -moz-transform: $a;
+//     transform: $a;
+    
+// }
+
+@mixin transform ($arguments){
+    -webkit-transform: $arguments;
+    -ms-transform: $arguments;
+    -moz-transform: $arguments;
+    transform: $arguments;
+    
+}
+
+@mixin transition ($arguments:all .5s){
+    -webkit-transition: $arguments;
+    -ms-transition: $arguments;
+    -o-transition: $arguments;
+    -moz-transition: $arguments;
+    transition: $arguments;
+}

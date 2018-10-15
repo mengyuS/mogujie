@@ -46,3 +46,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.clearfix:after{clear:both; content:''; font-size:0; display:block; visibility:hidden; height:0}
+a{
+	text-decoration: none;
+}

@@ -1,2 +1,768 @@
 @import "_reset.scss";
 
+
+body{
+    min-width: 960px;
+    font-size: 12px;
+    background: #f5f5f5;
+}
+.wrap{
+    width: 1190px;
+    margin: 0 auto;
+}
+header{
+    background: #f2f2f2;
+    border-bottom: 1px solid #ddd;
+    height: 31px;
+    .header-top{
+        // width: 1190px;
+        position: relative;
+        // margin: 0 auto;
+
+        .header-left{
+            background: url(https://s10.mogucdn.com/p2/161011/upload_8dhi7ll8egg1ee9i12a3fc1lg93b9_609x784.png) -4px -234px no-repeat;
+            padding: 0 20px;
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            vertical-align: top;
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
+        }
+        ul{
+            float: right;
+            li{
+                // display: inline-block;
+                position: relative;
+                float: left;
+                margin: 0 15px 0 0;
+                height: 31px;
+                line-height: 31px;
+                a{
+                    display: block;
+                    float: left;
+                    text-decoration: none;
+                    margin-top: 8px;
+                    color: #666;
+                    line-height: 14px;  
+                    
+                } 
+                i{
+                    position: absolute;
+                    width: 7px;
+                    height: 5px;
+                    top: 14px;
+                    right: 0;
+                    background: url(../images/1.png) -4px -229px;
+                }  
+                //二级菜单
+                ol{ 
+                    position: absolute;
+                    z-index: 100;
+                    display: block;
+                    width: 100px;
+                    top: 100%;
+                    left: 0;
+                    background: #eee;
+                    border: 1px solid #ddd;
+                    border-top: none;
+                    border-radius: 0 0 3px 3px;
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        margin: 0 0 2px 0;
+                        float: none;
+                        a{
+                            display: block;
+                            height: 28px;
+                            line-height: 28px;
+                            padding: 0 20px;
+                            color: #444;
+                            margin: 0;               
+                        }
+                    }
+                }                         
+            }
+            .top-li
+            {
+                a{
+                    padding-left: 38px;
+                    border-left: 1px solid #ddd  
+                }   
+            }
+            .mylist{
+                background: url(../images/1.png) 16px -528px no-repeat;
+            } 
+            .goodscar{
+                background: url(../images/1.png) 8px -420px no-repeat;
+            }
+            .fuwu{
+                padding-right: 10px;
+                a{
+                    padding-left: 15px;
+                }
+                ol{
+                    a{ 
+                        padding: 0 20px;
+                        border-left:0;
+                    }
+                }               
+            }
+            .houtai{
+                margin-right: 0;
+                padding-right: 10px;
+                background: url(../images/1.png) 8px -566px no-repeat;
+                ol{
+                    a{
+                        border-left:0;
+                        padding: 0 20px;
+                    }
+                }
+            }
+        }
+
+
+    }
+   
+}
+//搜索部分
+.search-big{
+    width: 100%;
+    background: #fff;
+}
+.search{
+    position: relative;
+    background: #fff;
+    .search-left{
+        float: left;
+        width: 240px;
+        height: 90px;
+        overflow: hidden;
+        img{
+            height: 100%;
+            float: left;
+        }
+    }
+    .search-middle{
+        width: 482px;
+        height: 90px;
+        float: left;
+        margin-left: 120px;
+        .search-connect{
+            position: relative;
+            // z-index: 50;
+            width: 482px;
+            margin-top: 20px;
+          
+            .search-input{
+                border: 1px solid #f07;
+                width: 480px;
+                height: 34px;
+                border-radius: 0 6px 6px 0;
+                background: #fff;
+               
+                .search-kind{
+                    position: relative;
+                    float: left;
+                    width: 60px;
+                    // z-index: 10;
+                    text-align: center;
+                    span{
+                        display: block;
+                        height: 34px;
+                        line-height: 34px;
+                        color: #f07;
+                        background: url(../images/2.png) no-repeat center right;
+
+                    }
+                    ul{
+                        position: absolute;
+                        top: 100%;
+                        left: -1px;
+                        width: 60px;
+                        background-color: #fff;
+                        border: 1px solid #e5e5e5;
+                        // background-color: rgba(255, 255, 255, 0.8);
+                        li{
+                            a{
+                                text-decoration: none;
+                                color: #f07;
+                                display: block;
+                                height: 30px;
+                                line-height: 30px;
+                            }
+                        }
+                    }
+                    
+                }
+                input{
+                    display: block;
+                    float: left;
+                    overflow: hidden;
+                    width: 305px;
+                    height: 22px;
+                    line-height: 22px;
+                    padding: 6px 0 6px 10px;
+                    border: none;
+                    color: #999;
+                    font-size: 12px;
+                    background-color: #fff;
+                }
+                button{
+                    border: none;
+                    float: right;
+                    height: 34px;
+                    line-height: 34px;
+                    overflow: hidden;
+                    width: 100px;
+                    background-color: #f07;
+                    font-size: 16px;
+                    color: #fff;
+                    border-radius: 0 5px 5px 0;
+                }
+                
+            }
+            .hotwords{
+                width: 482px;
+                height: 20px;
+                overflow: hidden;
+                margin-top: 5px;
+                a{
+                    float: left;
+                    height: 20px;
+                    line-height: 20px;
+                    margin: 0 12px 0 0;
+                    color: #666;
+                    &:hover{
+                        color: #ff4466;
+                        text-decoration: underline;
+                    }
+                }
+                .hot{
+                    color: #ff4466;
+                }
+            }
+
+        }
+    }
+    .search-right{
+        position: absolute;
+        width: 220px;
+        height: 90px;
+        right: 0;
+        top: 0;      
+        img{
+            height: 100%;
+            float: right;
+        }
+    }
+}
+//二级菜单分类
+.content{
+    width: 100%;
+    // height: 40px;
+    margin: 0 auto;
+    .nav-top{
+        height: 40px;
+        border-bottom: 2px solid #f07;
+        background: #fff;
+        //上方部分
+        .nav-top-content{
+            .left{
+                background: url(../images/3.png);
+                float: left;
+                height: 40px;
+                width: 257px;
+                overflow: hidden;
+                position: relative;
+                border-radius: 5px 5px 0 0;
+                a{
+                    position: absolute;
+                    left: 47px;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 18px;
+                    color: #fff;
+                }
+            }
+            .right{
+                float: left;
+                height: 40px;
+                a{
+                    display: block;
+                    height: 20px;
+                    width: 140px;
+                    margin-top: 10px;
+                    border-right: 1px solid #ddd;
+                    text-align: center;
+                    line-height: 20px;
+                    font-size: 18px;
+                    color: #333;
+                    float: left;
+                }
+                .r{
+                    border-right: 0;
+                }
+                
+            }
+
+        }
+    }
+    //下方 
+    .content-banner{
+        width: 100%;
+        position: relative;
+        margin-bottom: 15px;
+        background-color: rgb(255, 201, 139);
+        .wrap{
+            height: 440px;
+            //二级分类
+            .nav{
+                width: 256px;
+                height: 100%;
+                float: left;
+                position: relative;
+                background-color: rgba(255, 255, 255, 0.8);
+                .nav-ul1{
+                    .ul1-li{
+                        margin: 0;
+                        padding: 0 !important;
+                        height: 31px;
+                        // overflow: hidden;
+                        font-family: 'PingFang SC';
+                        position: relative;
+                        // 二级菜单隐藏部分
+                        .erji{
+                            position: absolute;
+                            top: -3px;
+                            left: 100%;
+                            width: 777px;
+                            height: 438px;
+                            overflow: hidden;
+                            background-color: #fff;
+                            border-top: 1px solid #F2F2F2;
+                            border-right: 1px solid #F2F2F2;
+                            border-bottom: 1px solid #F2F2F2;
+                            .cont{
+                                // display: block;
+                                // top: -1px;
+                                // left: 253px;
+                                // height: 434px;
+                                .left{
+                                    width: 500px;
+                                    height: 100%;
+                                    padding: 0 0 0 20px;
+                                    float: left;
+                                    .cont-first{
+                                        margin-top: 15px;
+                                    }
+                                    ul{
+                                        width: 500px;
+                                        margin-bottom: 18px;
+                                        overflow: hidden;
+                                        h1{
+                                            width: 500px;
+                                            height: 24px;
+                                            line-height: 24px;
+                                            font-size: 12px;
+                                            color: #333;
+                                            span{
+                                                height: 40px;
+                                                font-size: 14px;
+                                                line-height: 40px;
+                                                margin: 0;
+                                                color: #333;
+                                                font-weight: bold;
+                                            }
+                                            a{
+                                                display: block;
+                                                float: right;
+                                                margin-right: 20px;
+                                                height: 40px;
+                                                line-height: 40px;
+                                                color: #333;
+                                            }
+                                        }
+                                        //热门词汇变色
+                                        .hot{
+                                            color: #f07;
+                                        }
+                                        li{
+                                            max-height: 50px;
+                                            overflow: hidden;
+                                            margin-top: 8px;
+                                            font-size: 12px;
+                                            color: #999;
+                                            a{
+                                                display: block;
+                                                line-height: 19px;
+                                                float: left;
+                                                margin: 6px 20px 0 0;
+                                                color: #999
+                                            }
+                                        }
+                                    }
+                                }
+                                .right{
+                                    float: right;
+                                    height: 440px;
+                                    width: 256px;
+                                    border-left: 1px solid #f6f6f6;
+                                    h2{
+                                        width: 100%;
+                                        height: 19px;
+                                        line-height: 19px;
+                                        font-size: 16px;
+                                        margin: 15px auto 10px;
+                                        text-align: center;
+                                        font-weight: bold;
+                                    }
+                                    div{
+                                        width: 100px;
+                                        height: 120px;
+                                        float: left;
+                                        margin: 6px 4px 2px 17px;
+                                        img{
+                                            display: block;
+                                            width: 100px;
+                                            height: 100px;
+                                        }
+                                        a{
+                                            display: block;
+                                            width: 100px;
+                                            height: 22px;
+                                            line-height: 22px;
+                                            font-size: 12px;
+                                            opacity: 0.9;
+                                            white-space: nowrap;
+                                            text-overflow: ellipsis;
+                                            overflow: hidden;
+                                            color: #333;
+                                           
+                                        }
+                                    }
+                                }
+                            }
+
+                        }
+                        dl{
+                            margin: 0;
+                            padding: 5px 0 5px 18px;
+                            dt{
+                                margin: 0;
+                                padding: 0;
+                                height: 21px;
+                                line-height: 21px;
+                                float: left;
+                                a{
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    color: #333;
+                                   
+                                }
+
+                            }
+                            dd{
+                                float: left;
+                                height: 21px;
+                                line-height: 22px;
+                                a{
+                                    margin-left: 12px;
+                                    display: inline-block;
+                                    height: 100%;
+                                    font-size: 12px;
+                                    color: #666;
+                                    font-weight: normal;
+                                    span{
+                                        display: inline-block;
+                                        width: 12px;
+                                        height: 13px;
+                                        display: inline-block;
+                                        margin-left: 2px;
+                                        background: url(../images/hot.png);
+                                        background-size: 100% 100%;
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+                    .first{
+                        margin-top: 4px;
+                    }
+                }
+
+            }
+            //图片
+            .pic{
+                width: 768px;
+                height: 440px;
+                float: left;
+            }
+            .user{
+                width: 166px;
+                height: 420px;
+                margin-top: 10px;
+                float: left;
+                .user-wrap{
+                    position: relative;
+                    width: 166px;
+                    height: 195px;
+                    padding-top: 10px;
+                    background-color: rgba(255, 255, 255, 0.8);
+                   
+                }
+                .user-top{
+                    margin-bottom: 10px;
+                    .us{
+                        display: block;                      
+                        width: 72px;
+                        height: 72px;
+                        margin: 0 auto 0 auto;
+                        border-radius: 100%;
+                        background: #ff94c6 url(../images/us.png) no-repeat center center;
+                        background-size: 30px 30px;
+
+                    }
+                    p{
+                        font-size: 12px;
+                        height: 18px;
+                        line-height: 18px;
+                        margin: 5px 0 7px 0;
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                        .welcome{
+                            font-weight: bold;
+
+                        }
+                    }
+                    .us-center{
+                        display: block;
+                        width: 72px;
+                        height: 24px;
+                        border: 1px solid #ff5777;
+                        font-size: 12px;
+                        color: #ff5777;
+                        margin: 0 auto;
+                        line-height: 24px;
+                        text-align: center;
+                    }
+                }
+                .user-bottom{
+                    padding: 0;
+                    height: 205px;
+                    .share{
+                        width: 100%;
+                        height: 75px;
+                        margin: 0 auto;
+                        text-align: center;
+                        .friend{
+                            line-height: 22px;
+                            display: block;
+                            font-size: 16px;
+                            color: #333;
+                            padding-top: 20px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 100%;
+                        }
+                        .redbag{
+                            display: block;
+                            font-size: 14px;
+                            line-height: 18px;
+                            color: #666;
+                            margin-top: 5px;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            width: 100%;
+                        }
+                    }
+                    .use-img{
+                        width: 130px;
+                        height: 130px;
+                        overflow: hidden;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+.time{
+    margin-bottom: 48px;
+    // background: #fff;
+    position: relative;
+    .time-top{
+        // overflow: hidden;
+        width: 100%;
+        height: 294px;
+        background-color: #ffffff;
+        margin-bottom: 10px;
+        position: relative;
+        .djs{
+            width: 230px;
+            height: 294px;
+            overflow: hidden;
+            background: url(../images/djs.jpg);
+            background-size: 100% 100%;
+            float: left;
+            p{
+                height: 58px;
+                line-height: 58px;
+                position: absolute;
+                top: 215px;
+                left: 42.5px;
+                span{
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    width: 40px;
+                    border-radius: 4px;
+                    background: #0c0c0c;
+                    color: #fff;
+                    font-size: 30px;
+                    text-align: center;
+                }
+                i{
+                    display: inline-block;
+                    height: 40px;
+                    line-height: 40px;
+                    font-size: 30px;
+
+                }
+            }
+        }
+        .show{
+            width: 960px;
+            height: 294px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+            button{
+                width: 25px;
+                height: 35px;
+                border: none;
+                background: rgb(139, 132, 132);
+                position: absolute;
+                z-index: 10;
+                color: rgb(229, 226, 226);
+            }
+                                  
+                #left{
+                    left: 0;
+                    top:50%;
+                }
+                #right{                         
+                    right: 0;
+                    top:50%;
+                }
+            
+            ul{
+                width:3840px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                // transition:all 1.5s;
+          
+               
+              
+                
+                li{
+                    width: 960px;
+                    height: 294px;
+                    float: left;
+                    box-sizing: border-box;
+                    padding: 0 20px 0 20px;
+                   
+                    .d1{
+                        width: 190px;
+                        height: 248px;
+                        padding: 30px 20px 16px 20px;
+                        float: left;
+                        img{
+                            width: 190px;
+                            height: 190px;
+                            overflow: hidden;
+                            display: block;
+                        }
+                        a{  
+                            display: block;
+                            color: #666;
+                            font-size: 16px;
+                            line-height: 20px;
+                            height: 22px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                           
+                            margin-top: 13px;
+                            margin-bottom: 2px;
+                            padding: 0 10px;
+                        }
+                        .price{
+                            position: relative;
+                            top: -5px;
+                            padding: 0 10px;
+                            margin-top: 10px;
+                            em{
+                                display: inline-block;
+                                color: #FF4B6D;
+                                font-style: normal;
+                                font-size: 22px;
+                                
+                            }
+                            del{
+                                display: block;
+                                font-size: 14px;
+                                color: #999;                        
+                                margin-left: 10px;
+                                float: right;
+                                position: relative;
+                                top: 5px;
+                               
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+    .time-bottom{
+        width: 1190px;
+        height:150px;
+        a{
+            height: 150px;
+            display: block;
+            float: left;
+            overflow: hidden;
+            img{
+                width: 100%;
+            }
+        }
+        .bottom-fir{
+            width: 470px !important;
+            margin-right: 10px;
+        }
+        .bottom-sec{
+            width: 230px;
+            margin-right: 10px;
+        }
+        .last{
+            margin-right: 0;
+        }
+    }
+
+   
+}

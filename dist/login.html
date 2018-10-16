@@ -80,7 +80,7 @@
         var obtn = document.getElementById("btn");
 
         obtn.onclick = function(){
-            var url="http://localhost:8888/mogujie/php/login.php";
+            var url="http://localhost:8888/proxy/localhost/php/login.php";
             ajaxPost(url,`username=${username.value}&password=${password.value}`)
             .then( function(res){
                 // console.log(res);

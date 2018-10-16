@@ -141,13 +141,13 @@
                  }
          
                  obtn.onclick = function(){
-                     var url="http://localhost:80/php/register.php";
+                     var url="http://localhost:8888/proxy/localhost/php/register.php";
                      ajaxPost(url,`username=${user.value}&password=${pwd1.value}`)
                      .then( function(res){
                          //console.log(res);
                          if(res=="注册成功"){
                              alert(res);
-                             location.href="index.html"
+                             location.href="login.html"
                          }else{
                              alert(res)
                          }

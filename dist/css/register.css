@@ -118,6 +118,9 @@ h2 {
       padding: 0 6px;
       background: none !important;
       margin-bottom: 15px; }
+  .register-content .txt {
+    color: #f00;
+    font-size: 14px; }
   .register-content button {
     display: block;
     margin-top: 30px;

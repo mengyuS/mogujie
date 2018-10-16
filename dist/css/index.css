@@ -640,3 +640,182 @@ header {
       margin-right: 10px; }
     .time .time-bottom .last {
       margin-right: 0; }
+
+.girl-clothes {
+  width: 1190px;
+  margin: 0 auto;
+  margin-bottom: 47px; }
+  .girl-clothes .girl-top {
+    height: 22px;
+    line-height: 22px;
+    overflow: hidden;
+    margin: 0 0 16px;
+    width: 100%;
+    font-size: 20px; }
+    .girl-clothes .girl-top p {
+      width: 8px;
+      height: 100%;
+      float: left;
+      margin-right: 10px;
+      background-color: #FFA1B8; }
+    .girl-clothes .girl-top h1 {
+      float: left;
+      margin-right: 30px;
+      height: 22px;
+      width: 40px;
+      line-height: 22px;
+      font-size: 20px;
+      font-weight: 700; }
+    .girl-clothes .girl-top ul {
+      float: left;
+      height: 100%;
+      font-size: 14px;
+      display: block;
+      line-height: 22px; }
+      .girl-clothes .girl-top ul li {
+        margin: 0 16px;
+        font-size: 14px;
+        float: left;
+        color: #333; }
+      .girl-clothes .girl-top ul i {
+        display: block;
+        float: left; }
+  .girl-clothes .girl-bottom .left-img {
+    display: block;
+    float: left;
+    width: 230px;
+    height: 624px;
+    overflow: hidden;
+    margin-right: 10px;
+    position: relative; }
+    .girl-clothes .girl-bottom .left-img img {
+      width: 100%;
+      height: 100%; }
+  .girl-clothes .girl-bottom .right {
+    width: 950px;
+    float: left; }
+    .girl-clothes .girl-bottom .right .right-ul {
+      width: 950px;
+      height: 408px;
+      margin-bottom: 10px;
+      position: relative;
+      overflow: hidden; }
+      .girl-clothes .girl-bottom .right .right-ul button {
+        width: 25px;
+        height: 35px;
+        border: none;
+        background: #8b8484;
+        position: absolute;
+        z-index: 10;
+        color: #e5e2e2; }
+      .girl-clothes .girl-bottom .right .right-ul #left2 {
+        left: 0;
+        top: 50%; }
+      .girl-clothes .girl-bottom .right .right-ul #right2 {
+        right: 0;
+        top: 50%; }
+      .girl-clothes .girl-bottom .right .right-ul ul {
+        width: 3800px;
+        height: 408px;
+        position: absolute;
+        left: 0;
+        top: 0; }
+        .girl-clothes .girl-bottom .right .right-ul ul li {
+          float: left; }
+          .girl-clothes .girl-bottom .right .right-ul ul li .d1 {
+            width: 230px;
+            height: 408px;
+            padding: 16px;
+            margin-right: 10px;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            float: left;
+            background: #ffffff;
+            border-radius: 2px;
+            overflow: hidden; }
+            .girl-clothes .girl-bottom .right .right-ul ul li .d1 img {
+              display: block;
+              width: 198px;
+              height: 297px;
+              overflow: hidden;
+              border-radius: 4px;
+              margin-bottom: 7px; }
+            .girl-clothes .girl-bottom .right .right-ul ul li .d1 p {
+              font-size: 16px;
+              letter-spacing: 0;
+              height: 2.8em;
+              position: relative;
+              line-height: 1.4em;
+              width: 198px;
+              color: #333333;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2; }
+            .girl-clothes .girl-bottom .right .right-ul ul li .d1 span {
+              display: block;
+              height: 24px;
+              line-height: 24px;
+              font-size: 22px;
+              color: #FF5777;
+              margin-top: 3px; }
+          .girl-clothes .girl-bottom .right .right-ul ul li .last {
+            margin-right: 0; }
+    .girl-clothes .girl-bottom .right .right-middle {
+      width: 950px; }
+      .girl-clothes .girl-bottom .right .right-middle img {
+        display: block;
+        float: left;
+        width: 230px;
+        height: 113px;
+        margin-right: 10px; }
+      .girl-clothes .girl-bottom .right .right-middle .m1 {
+        width: 470px; }
+      .girl-clothes .girl-bottom .right .right-middle .m3 {
+        margin-right: 0; }
+    .girl-clothes .girl-bottom .right .right-bottom {
+      width: 950px;
+      height: 86px;
+      display: inline-block;
+      margin-top: 6px; }
+      .girl-clothes .girl-bottom .right .right-bottom div {
+        background: #ffffff;
+        width: 230px;
+        height: 83px;
+        overflow: hidden;
+        margin-right: 10px;
+        position: relative;
+        float: left; }
+        .girl-clothes .girl-bottom .right .right-bottom div p {
+          float: left;
+          width: 137px;
+          margin-left: 13px;
+          margin-top: 15px; }
+          .girl-clothes .girl-bottom .right .right-bottom div p span {
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+            height: 32px;
+            font-size: 20px;
+            line-height: 20px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            color: #ff5757; }
+          .girl-clothes .girl-bottom .right .right-bottom div p i {
+            display: inline-block;
+            overflow: hidden;
+            width: 100%;
+            font-size: 14px;
+            color: #666666;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+        .girl-clothes .girl-bottom .right .right-bottom div img {
+          display: block;
+          right: 0;
+          position: absolute;
+          width: 83px;
+          height: 83px;
+          transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out; }
+      .girl-clothes .girl-bottom .right .right-bottom .b-r {
+        margin-right: 0; }

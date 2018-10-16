@@ -599,6 +599,7 @@ header{
         }
     }
 }
+//倒计时
 .time{
     margin-bottom: 48px;
     // background: #fff;
@@ -643,6 +644,7 @@ header{
                 }
             }
         }
+        //倒计时后方轮播图；
         .show{
             width: 960px;
             height: 294px;
@@ -673,11 +675,7 @@ header{
                 position: absolute;
                 left: 0;
                 top: 0;
-                // transition:all 1.5s;
-          
-               
-              
-                
+                // transition:all 1.5s;            
                 li{
                     width: 960px;
                     height: 294px;
@@ -765,4 +763,234 @@ header{
     }
 
    
+}
+
+//女装部分：
+//标题
+.girl-clothes{
+    width: 1190px;
+    margin: 0 auto;
+    margin-bottom: 47px;
+    .girl-top{
+        height: 22px;
+        line-height: 22px;
+        overflow: hidden;
+        margin: 0 0 16px;
+        width: 100%;
+        font-size: 20px;
+        p{
+            width: 8px;
+            height: 100%;
+            float: left;
+            margin-right: 10px;
+            background-color: #FFA1B8;
+        }
+        h1{
+            float: left;
+            margin-right: 30px;
+            height: 22px;
+            width: 40px;
+            line-height: 22px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+        ul{
+            float: left;
+            height: 100%;
+            font-size: 14px;
+            display: block;
+            line-height: 22px;
+            li{
+                margin: 0 16px;
+                font-size: 14px;
+                float: left;
+                color: #333;
+
+            }
+            i{
+                display: block;
+                float: left;
+            }
+        }
+    }
+
+
+    //女装图片部分
+    .girl-bottom{
+        
+        .left-img{
+            display: block;
+            float: left;
+            width: 230px;
+            height: 624px;
+            overflow: hidden;
+            margin-right: 10px;
+            position: relative;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+        //女装轮播图
+        .right{
+            width: 950px;
+            float: left;
+            .right-ul{
+                width: 950px;
+                height: 408px;
+                margin-bottom: 10px;
+                position: relative;
+                overflow: hidden;
+                button{
+                    width: 25px;
+                    height: 35px;
+                    border: none;
+                    background: rgb(139, 132, 132);
+                    position: absolute;
+                    z-index: 10;
+                    color: rgb(229, 226, 226);
+                }
+                                      
+                    #left2{
+                        left: 0;
+                        top:50%;
+                    }
+                    #right2{                         
+                        right: 0;
+                        top:50%;
+                    }
+                ul{
+                    width: 3800px;
+                    height: 408px;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    li{
+                        float: left;
+                        .d1{
+                            width: 230px;
+                            height: 408px;
+                            padding: 16px;
+                            margin-right: 10px;
+                            -moz-box-sizing: border-box;
+                            box-sizing: border-box;
+                            
+                            float: left;
+                            background: #ffffff;
+                            border-radius: 2px;
+                            overflow: hidden;
+                            img{
+                                display: block;
+                                width: 198px;
+                                height: 297px;
+                                overflow: hidden;
+                                border-radius: 4px;
+                                margin-bottom: 7px;
+                                
+                            }
+                            p{
+                                font-size: 16px;
+                                letter-spacing: 0;                              
+                                height: 2.8em;
+                                position: relative;
+                                line-height: 1.4em;
+                                width: 198px;
+                                color: #333333;
+                                //多行文本省略号
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-box-orient: vertical;
+                                -webkit-line-clamp: 2;
+                            }
+                            span{
+                                display: block;
+                                height: 24px;
+                                line-height: 24px;
+                                font-size: 22px;
+                                color: #FF5777;
+                                margin-top: 3px;
+                            }
+                        }
+                        .last{
+                            margin-right: 0;                          
+                        }                          
+                    }
+                }
+            }
+            .right-middle{
+                width: 950px;
+                img{
+                    display: block;
+                    float: left;
+                    width: 230px;
+                    height: 113px;
+                    margin-right: 10px;
+                }
+                .m1{
+                    width: 470px;
+                }
+                .m3{
+                    margin-right: 0;
+                }                                
+            }
+            .right-bottom{
+                width: 950px;
+                height: 86px;
+                display: inline-block;
+                margin-top: 6px;
+                div{
+                    background: #ffffff;
+                    width: 230px;
+                    height: 83px;
+                    overflow: hidden;
+                    margin-right: 10px;
+                    position: relative;
+                    float: left;
+                    p{
+                        float: left;
+                        width: 137px;
+                        margin-left: 13px;
+                        margin-top: 15px;
+                        span{
+                            display: inline-block;
+                            overflow: hidden;
+                            width: 100%;
+                            height: 32px;;
+                            font-size: 20px;
+                            line-height: 20px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            color: #ff5757;
+                        }
+                        i{
+                            display: inline-block;
+                            overflow: hidden;
+                            width: 100%;
+                            font-size: 14px;
+                            color: #666666;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+                    }
+                   
+                    img{
+                        display: block;
+                        right: 0;
+                        position: absolute;
+                        width: 83px;
+                        height: 83px;
+                        transition: transform 0.4s ease-out, -webkit-transform 0.4s ease-out;
+                    }
+                }
+                .b-r{
+                    margin-right: 0;
+                }
+            }
+
+        }
+        
+    }
+
 }

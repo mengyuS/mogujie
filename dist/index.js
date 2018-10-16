@@ -30,3 +30,45 @@ $(".search-kind").on("mouseleave",function(){
  $(".ul1-li").on("mouseleave",function(){
     $(this).children(".erji").hide();
 })
+
+$(".login").click(function(){
+    location.href="login.html"
+})
+//登录界面 登录方式切换
+$(".login-er").hide();
+$(".login-er .pic").on("click",function(){
+    $(".login-user").show();
+    $(".login-er").hide();
+})
+$(".login-user .pic2").on("click",function(){
+    $(".login-er").show();
+    $(".login-user").hide();
+})
+
+//用户名  手机号登录方式的切换
+$(".phone .form").hide();
+$(".phone").on("click",function(){
+    $(this).children("div").show();
+    $(".putong div").hide();
+    $(".phone a").css({
+        "border-bottom": "2px solid #ff4066",
+        "color": "#fe617a"
+    })
+    $(".putong a").css({
+        "border-bottom": 0,
+        "color": "#3c3c3c"
+    })
+})
+$(".putong").on("click",function(){
+    $(this).children("div").show();
+    $(".phone div").hide();
+    $(".putong a").css({
+        "border-bottom": "2px solid #ff4066",
+        "color": "#fe617a"
+    })
+    $(".phone a").css({
+        "border-bottom": 0,
+        "color": "#3c3c3c"
+    })
+})
+   

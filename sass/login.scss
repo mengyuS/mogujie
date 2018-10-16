@@ -1,3 +1,209 @@
+@import "_reset.scss";
 body{
     min-width: 1200px;
+    font-size: 12px;
+   
+}
+.login-top{
+    width: 1200px;
+    background-color: #fff;
+    padding: 20px 0;
+    position: relative;
+    margin: 0 auto;
+    .logo{
+        background: url(../images/logo.jpg) no-repeat;
+        width: 220px;
+        height: 52px;
+
+    }
+    .login-tip{
+        position: absolute;
+        top: 32px;
+        display: inline-block;
+        height: 28px;
+        width: 861px;
+        margin-left: 240px;
+        background-color: #ffefef;
+        border: 1px solid #ffc0cc;
+        text-align: center;
+        line-height: 28px;
+        font-size: 11px;
+        color: #666;
+
+    }
+}
+.login-banner{
+    width: 100%;
+    height: 600px;
+    background: url(../images/login-bac.png) no-repeat center center;
+  
+    .login-content{
+        position: absolute;
+        height: 340px;
+        width: 356px;
+        right: 100px;
+        padding: 0 0 30px 44px;
+        background-color: #ffeceb;
+        margin-top: 80px;
+        opacity: 0.9;
+        .login-er{
+            position: relative;
+            height: 380px;
+            width: 100%;
+            .pic{
+                height: 53px;
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                width: 53px;
+                background: url(../images/login-er-pic.png) no-repeat;
+            }
+            p{
+                position: absolute;
+                height: 80px;
+                left: 60px;
+                top: 30px;
+                width: 200px;
+                background: url(https://s10.mogucdn.com/p1/160418/upload_ie4wiojrg43dombqhazdambqgqyde_190x37.png) no-repeat;
+            }
+            img{
+                width: 207px;
+                height: 207px;
+                display: block;              
+                position: absolute;
+                top: 100px;
+                left:50%;
+                margin-left: -130px;
+            }
+            a{
+                font-size: 18px;
+                text-decoration: underline;
+                height: 30px;
+                width: 200px;
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                margin-left: -100px;
+                color: #333;
+            }
+        }
+        .login-user{
+            position: relative;
+            height: 380px;
+            width: 100%;
+            .pic2{
+                height: 53px;
+                position: absolute;
+                z-index: 5;
+                right: 5px;
+                top: 5px;
+                width: 53px;
+                background: url(../images/login-user.png) no-repeat;
+            }
+            ul{
+                height: 70px;
+                margin-left: -38px;
+                position: relative;
+                li{
+                    width: 50%;
+                    height: 53px;
+                    
+                    border-bottom: 1px solid #ccc;
+                    float: left;
+                    a{
+                        display: block;
+                        height: 43px;
+                        line-height: 42px;
+                        text-align: center;
+                        font-size: 14px;
+                        font-weight: 700;
+                        color: #3c3c3c;
+                        width: 119px;
+                        margin: 10px 30px 0;
+                    }
+                }
+                .putong,.phone{
+                    a{
+                        color: #fe617a;
+                        height: 41px;
+                        border-bottom: 2px solid #ff4066;
+                        margin: 10px auto 0;
+                    }
+                    .form{
+                        position: absolute;
+                        top:100%;
+                        left: 40px;
+                        margin: 0 auto;
+                        input{
+                            display: block;
+                            height: 40px;
+                            width: 300px;
+                            border: 1px solid #ccc;
+                            padding: 0 6px;
+                            background: none!important;
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+                .phone{
+                    a{
+                        border-bottom: 0;
+                        color: #3c3c3c;
+                    }
+                    .form{
+                        span{
+                            display: block;
+                            width: 110px;
+                            height: 42px;
+                            float: left;
+                            line-height: 42px;
+                            text-align: center;
+                            margin-right: 10px;
+                            color: #fff;
+                            background-color: #ff5777;
+                        }
+                        .pwd{
+                            width: 180px;                            
+                        }
+                    }
+                }
+            }
+            button{
+                display: block;
+                margin-top: 124px;
+                border: none;
+                width: 314px;
+                height: 40px;
+                background: #ff5777;
+                border-radius: 2px;
+                color: #fff;
+            }
+            .bottom-logo{
+                margin-top: 20px;
+                padding-top: 6px;
+                a{
+                    display: block;
+                    float: left;
+                    margin-right: 47px;
+                    color: #333;
+                    img{
+                        margin-right: 6px;
+                        vertical-align: middle;
+                    }
+                }
+            }
+            p{
+                padding-top: 20px;
+                padding-right: 44px;
+                text-align: right;
+                text-decoration: underline;
+                a{
+                    display: block;
+                    float: left;
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
 }

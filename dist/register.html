@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css">
+</head>
+<body>
+        <div class="login-top">
+                <div class="logo">
+        
+                </div>
+                <span class="login-tip">依《网络安全法》相关要求，即日起蘑菇街会员登陆需绑定手机。为保障您的账户安全及正常使用，如您尚未绑定，请尽快完成绑定，感谢您的理解和支持!</span>
+        </div>
+        <h2>用户注册</h2>
+
+        <div class="register-content">
+                <p><span>用户名：</span><input type="text" id="usename"></p>
+                <p class="txt" id="txt1"></p>
+                <p><span>密  码：</span><input type="text" id="pwd1"></p>
+                <p class="txt" id="txt2"></p>
+                <p><span>确认密码：</span><input type="text" id="pwd2"></p>
+                <p class="txt" id="txt3"></p>
+                <p><span>邮箱验证：</span><input type="text" id="email"></p>
+                <p class="txt" id="txt4"></p>
+                <button id="btn">立即注册</button>
+        </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js">
+        </script>
+        <!-- <script src="jquery.js"></script> -->
+        <script src="jquery.cookie.js"></script>
+        <script src="index.js"></script>
+        <script src="texiao.js"></script>
+        <script src="ajax.js"></script>
+        <script>
+                var user = document.getElementById("usename");
+                 var pwd1 = document.getElementById("pwd1");
+                 var pwd2 = document.getElementById("pwd2");
+                 var email = document.getElementById("email");
+                 var obtn = document.getElementById("btn");
+         
+                 //1. 用户名;
+                 // 支持中文、英文 、 数字、 - 、 _ , 4 ~ 20 位字符; 不是纯数字 
+                var reg1 = /^[\u4e00-\u9fa50-9a-z\-]{4,20}$/;
+                var regnum = /^\d+$/;
+                //var suser = user.value  不能作全局，这个时候input还没有输入内容，为空；
+                
+                 user.onblur = function(){
+                     var suser = user.value;   //必须为局部变量，不能作全局；
+                     if(reg1.test(suser)){
+                         user.style.borderColor="green";
+         
+                     }else{
+                         user.style.borderColor="red";
+                     }
+                    
+                     if(regnum.test(suser)){
+                         //alert("用户名不能为纯数字");
+                         txt1.innerHTML="用户名不能为纯数字"
+                         return 0;
+                       
+                      } 
+                      
+                     
+                 }
+         
+         
+                 //2.密码；
+                 //  6~20位组合;密码强度；
+                // var reg2 = /^[0-9][a-z][A-Z]\!\@\#\$\%\^\&\*\(\-/;
+                var reg2 =/^[\da-zA-Z\!\@\#\$\%\^\&\*\(\-]{6,20}$/;
+                 var regpwd1= /\d/;
+                 var regpwd2 = /[a-zA-Z]/;
+                 var regpwd3 = /[\!\@\#\$\%\^\&\*\(\-]/;
+                 // var spwd1 = pwd1.value;
+                 pwd1.onblur = function(){
+                    
+                     var source = 0;
+                     var spwd1 = pwd1.value;
+                     if(reg2.test(spwd1)){
+                         if(regpwd1.test(spwd1)){
+                         source++;
+                          }
+                          if(regpwd2.test(spwd1)){
+                         source++;
+                         }
+                         if(regpwd3.test(spwd1)){
+                         source++;
+                          }
+                        
+                         switch(source){
+                              case 1: pwd1.style.borderColor="red";
+                             break;
+                             case 2: pwd1.style.borderColor="yellow";
+                             break;
+                             case 3: pwd1.style.borderColor="green";
+                             break;
+                          }
+                          console.log(source)
+                     }else{
+                       //  alert("密码长度在6~20位");
+                         txt2.innerHTML="密码长度在6~20位"
+                         return 0;
+                     }
+                    
+                    
+                   
+                 }
+                 
+                 //确认密码验证；
+                 pwd2.onblur = function(){
+                     var spwd1 = pwd1.value;
+                     var spwd2 = pwd2.value;
+                     if(spwd2!=spwd1){
+                         //alert("确认秘密和密码不一致！");
+                         txt3.innerHTML="确认秘密和密码不一致！"
+                         return 0;
+                        
+                     }
+                    
+         
+                 }
+         
+                 //邮箱验证；
+                 //只能以数字字母开头 数字字母下划线 6 ~ 20位;
+                 var reg3=/^[0-9a-z][0-9a-z\-]{5,19}@[0-9a-z]{2,4}\.[a-z]{2,5}$/;
+                 email.onblur = function(){
+                     var semail = email.value;
+                     if(reg3.test(semail)){
+                         email.style.borderColor="green"
+         
+                     }else{
+                         //alert("请输入正确的邮箱格式！");
+                         txt4.innerHTML="请输入正确的邮箱格式！";
+                         return 0;
+                     }
+                 }
+         
+                 obtn.onclick = function(){
+                     var url="http://localhost:80/php/register.php";
+                     ajaxPost(url,`username=${user.value}&password=${pwd1.value}`)
+                     .then( function(res){
+                         //console.log(res);
+                         if(res=="注册成功"){
+                             alert(res);
+                             location.href="index.html"
+                         }else{
+                             alert(res)
+                         }
+         
+         
+                   
+         
+                     })
+                 }
+         
+         
+         
+                 
+             
+             
+             
+             
+             </script>
+</body>
+
+</html>

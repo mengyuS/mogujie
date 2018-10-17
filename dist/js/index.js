@@ -19,11 +19,29 @@ $(".search-kind").on("mouseleave",function(){
 
 
 //搜索框顶部
-var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
-var topsearch = document.getElementsByClassName("topsearch");
-if(scrollTop>=300){
-   topsearch.display="block"
+$(".topsearch").hide(); 
+onscroll = function(event){
+    var e =event || window.event;
+    var scrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
+    if(scrollTop>=500){
+     $(".topsearch").show();         
+     
+    }
+    if(scrollTop<500){
+        $(".topsearch").hide(); 
+    }
 }
+//顶部搜索框二级菜单显示与隐藏；
+$(".search-left1 .nav").hide();
+
+$(".search-left1").on("mouseenter",function(){
+    $(".search-left1 .nav").show();
+})
+$(".search-left1").on("mouseleave",function(){
+    $(".search-left1 .nav").hide();
+})
+
+
 
 //nav二级菜单带hot标志的变颜色
  $(".ul1-li  dl dd").children("a:has(span)").css({
@@ -93,3 +111,7 @@ $(".right-bottom .big").on("mouseleave",function(){
     })
 })
    
+$(".describe em").hide();
+$(".box").on("mouseenter",function(){
+    $(".describe em").show();
+})

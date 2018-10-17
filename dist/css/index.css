@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -252,11 +253,193 @@ header {
       float: right; }
 
 .topsearch {
-  height: 90px;
   position: fixed;
   top: 0;
-  z-index: 99;
-  display: none; }
+  z-index: 99; }
+  .topsearch .search-left1 {
+    float: left;
+    margin-top: 7px;
+    line-height: 40px;
+    position: relative;
+    height: 43px;
+    margin-left: 80px;
+    cursor: pointer; }
+    .topsearch .search-left1 .search-left-nav {
+      display: block;
+      width: 200px;
+      height: 43px;
+      line-height: 43px;
+      overflow: hidden;
+      position: relative;
+      margin-left: 80px;
+      cursor: pointer; }
+      .topsearch .search-left1 .search-left-nav i {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+        background: url(../images/search-toplog1.png) center center/100% 100% no-repeat; }
+      .topsearch .search-left1 .search-left-nav span {
+        font-family: PingFangSC;
+        font-size: 14px;
+        color: #ff0077;
+        margin-left: 5px;
+        vertical-align: middle; }
+      .topsearch .search-left1 .search-left-nav em {
+        position: absolute;
+        right: 70px;
+        top: 20px;
+        width: 0px;
+        height: 0px;
+        vertical-align: middle;
+        border-width: 6px;
+        border-style: solid;
+        border-color: #ff0077 transparent transparent; }
+    .topsearch .search-left1 .nav {
+      width: 256px;
+      height: 440px;
+      float: left;
+      position: absolute;
+      top: 43px;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: 100; }
+      .topsearch .search-left1 .nav .nav-ul1 .ul1-li {
+        margin: 0;
+        padding: 0 !important;
+        height: 31px;
+        font-family: 'PingFang SC';
+        position: relative; }
+        .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji {
+          position: absolute;
+          top: -3px;
+          left: 100%;
+          width: 777px;
+          height: 438px;
+          overflow: hidden;
+          background-color: #fff;
+          border-top: 1px solid #F2F2F2;
+          border-right: 1px solid #F2F2F2;
+          border-bottom: 1px solid #F2F2F2; }
+          .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left {
+            width: 500px;
+            height: 100%;
+            padding: 0 0 0 20px;
+            float: left; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left .cont-first {
+              margin-top: 15px; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul {
+              width: 500px;
+              margin-bottom: 18px;
+              overflow: hidden; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul h1 {
+                width: 500px;
+                height: 24px;
+                line-height: 24px;
+                font-size: 12px;
+                color: #333; }
+                .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul h1 span {
+                  height: 40px;
+                  font-size: 14px;
+                  line-height: 40px;
+                  margin: 0;
+                  color: #333;
+                  font-weight: bold; }
+                .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul h1 a {
+                  display: block;
+                  float: right;
+                  margin-right: 20px;
+                  height: 40px;
+                  line-height: 40px;
+                  color: #333; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul .hot {
+                color: #f07; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul li {
+                max-height: 50px;
+                overflow: hidden;
+                margin-top: 8px;
+                font-size: 12px;
+                color: #999; }
+                .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .left ul li a {
+                  display: block;
+                  line-height: 19px;
+                  float: left;
+                  margin: 6px 20px 0 0;
+                  color: #999; }
+          .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .right {
+            float: right;
+            height: 440px;
+            width: 256px;
+            border-left: 1px solid #f6f6f6; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .right h2 {
+              width: 100%;
+              height: 19px;
+              line-height: 19px;
+              font-size: 16px;
+              margin: 15px auto 10px;
+              text-align: center;
+              font-weight: bold; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .right div {
+              width: 100px;
+              height: 120px;
+              float: left;
+              margin: 6px 4px 2px 17px; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .right div img {
+                display: block;
+                width: 100px;
+                height: 100px; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li .erji .cont .right div a {
+                display: block;
+                width: 100px;
+                height: 22px;
+                line-height: 22px;
+                font-size: 12px;
+                opacity: 0.9;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                color: #333; }
+        .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl {
+          margin: 0;
+          padding: 5px 0 5px 18px; }
+          .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl dt {
+            margin: 0;
+            padding: 0;
+            height: 21px;
+            line-height: 21px;
+            float: left; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl dt a {
+              font-size: 14px;
+              font-weight: bold;
+              color: #fff; }
+          .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl dd {
+            float: left;
+            height: 21px;
+            line-height: 22px; }
+            .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl dd a {
+              margin-left: 12px;
+              display: inline-block;
+              height: 100%;
+              font-size: 12px;
+              color: #fff;
+              font-weight: normal; }
+              .topsearch .search-left1 .nav .nav-ul1 .ul1-li dl dd a span {
+                display: inline-block;
+                width: 12px;
+                height: 13px;
+                display: inline-block;
+                margin-left: 2px;
+                background: url(../images/hot.png);
+                background-size: 100% 100%; }
+      .topsearch .search-left1 .nav .nav-ul1 .first {
+        margin-top: 4px; }
+  .topsearch .search-middle {
+    width: 482px;
+    height: 43px;
+    float: left;
+    margin-left: 120px; }
+    .topsearch .search-middle .search-connect {
+      margin-top: 7px; }
 
 .content {
   width: 100%;
@@ -985,43 +1168,98 @@ header {
     height: 373px;
     border: 1px solid #f2f2f2;
     background: #fff;
-    float: left; }
+    float: left;
+    overflow: hidden;
+    position: relative; }
     #wrap .box img {
       display: block;
       float: left;
-      width: 220px;
+      width: 218px;
       height: 293.5px !important; }
     #wrap .box .describe {
       /* display: block; */
       padding: 0 8px;
       overflow: hidden; }
-    #wrap .box p {
-      float: left;
-      height: 40px;
-      margin-bottom: 3px;
-      line-height: 20px;
-      position: relative;
-      margin-top: 6px;
-      font-size: 14px;
-      width: 100%;
-      overflow: hidden;
-      /* white-space: nowrap;
-            text-overflow: ellipsis; */ }
-    #wrap .box span {
-      display: block;
-      float: left;
-      height: 25px;
-      line-height: 25px;
-      overflow: hidden;
-      color: #333;
-      width: 50px;
-      font-size: 16px;
-      font-weight: bold; }
-    #wrap .box .sales {
-      display: block;
-      float: right; }
+      #wrap .box .describe p {
+        float: left;
+        height: 40px;
+        margin-bottom: 3px;
+        line-height: 20px;
+        position: relative;
+        margin-top: 6px;
+        font-size: 14px;
+        width: 100%;
+        overflow: hidden;
+        /* white-space: nowrap;
+                text-overflow: ellipsis; */ }
+      #wrap .box .describe span {
+        display: block;
+        float: left;
+        height: 25px;
+        line-height: 25px;
+        overflow: hidden;
+        color: #333;
+        width: 50px;
+        font-size: 16px;
+        font-weight: bold; }
+      #wrap .box .describe .sales {
+        display: block;
+        float: right; }
+      #wrap .box .describe em {
+        width: 218px;
+        text-align: center;
+        height: 20px;
+        line-height: 20px;
+        background: #f07;
+        color: #fff;
+        position: absolute;
+        z-index: 5;
+        bottom: 80px;
+        left: 0;
+        display: none; }
+  #wrap .box:hover {
+    border: 1px solid #f07; }
+  #wrap .box:hover em {
+    display: block;
+    opacity: 0.6; }
 
 #wrap::after {
   content: "";
   display: block;
   clear: both; }
+
+/* 右侧导航条 */
+.bar-right {
+  width: 30px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  color: #fff;
+  font-size: 12px;
+  background: #202020;
+  padding-top: 50px; }
+  .bar-right div {
+    position: relative;
+    padding: 4px 4px 0;
+    text-align: center; }
+    .bar-right div a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      line-height: 15px;
+      border-bottom: 1px solid rgba(221, 221, 221, 0.6);
+      padding-bottom: 12px; }
+      .bar-right div a i {
+        width: 30px;
+        height: 30px;
+        display: block;
+        background-image: url(../images/1.png);
+        background-repeat: no-repeat; }
+  .bar-right .goodscar a i {
+    background-position: -271px -129px; }
+  .bar-right .youhui i {
+    background-position: -271px -159px; }
+  .bar-right .money i {
+    background-position: -271px -219px; }
+  .bar-right .zuji i {
+    background-position: -271px -189px; }

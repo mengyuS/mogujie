@@ -251,6 +251,13 @@ header {
       height: 100%;
       float: right; }
 
+.topsearch {
+  height: 90px;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+  display: none; }
+
 .content {
   width: 100%;
   margin: 0 auto; }

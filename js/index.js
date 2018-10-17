@@ -17,6 +17,14 @@ $(".search-kind").on("mouseleave",function(){
     $(this).children("ul").hide();
 })
 
+
+//搜索框顶部
+var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+var topsearch = document.getElementsByClassName("topsearch");
+if(scrollTop>=300){
+   topsearch.display="block"
+}
+
 //nav二级菜单带hot标志的变颜色
  $(".ul1-li  dl dd").children("a:has(span)").css({
         color:"#f07"
@@ -73,7 +81,7 @@ $(".putong").on("click",function(){
 })
 
 
-
+//女装下方小图片运动
 $(".right-bottom .big").on("mouseenter",function(){
     $(this).stop().animate({
         top : -8

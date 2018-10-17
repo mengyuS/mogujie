@@ -260,92 +260,13 @@ header{
 }
 
 //顶部搜索框
-// .search-top{
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     background: yellowgreen;
-//     .left{
-//         float: left;
-//         width: 240px;
-//         height: 43px;
-//         overflow: hidden;
-//         margin-top: 7px;
-
-//     }
-//     .right{
-//         .search-input{
-//             border: 1px solid #f07;
-//             width: 480px;
-//             height: 34px;
-//             border-radius: 0 6px 6px 0;
-//             background: #fff;
-           
-//             .search-kind{
-//                 position: relative;
-//                 float: left;
-//                 width: 60px;
-//                 // z-index: 10;
-//                 text-align: center;
-//                 span{
-//                     display: block;
-//                     height: 34px;
-//                     line-height: 34px;
-//                     color: #f07;
-//                     background: url(../images/2.png) no-repeat center right;
-
-//                 }
-//                 ul{
-//                     position: absolute;
-//                     top: 100%;
-//                     left: -1px;
-//                     width: 60px;
-//                     background-color: #fff;
-//                     border: 1px solid #e5e5e5;
-//                     // background-color: rgba(255, 255, 255, 0.8);
-//                     li{
-//                         a{
-//                             text-decoration: none;
-//                             color: #f07;
-//                             display: block;
-//                             height: 30px;
-//                             line-height: 30px;
-//                         }
-//                     }
-//                 }
-                
-//             }
-//             input{
-//                 display: block;
-//                 float: left;
-//                 overflow: hidden;
-//                 width: 305px;
-//                 height: 22px;
-//                 line-height: 22px;
-//                 padding: 6px 0 6px 10px;
-//                 border: none;
-//                 color: #999;
-//                 font-size: 12px;
-//                 background-color: #fff;
-//             }
-//             button{
-//                 border: none;
-//                 float: right;
-//                 height: 34px;
-//                 line-height: 34px;
-//                 overflow: hidden;
-//                 width: 100px;
-//                 background-color: #f07;
-//                 font-size: 16px;
-//                 color: #fff;
-//                 border-radius: 0 5px 5px 0;
-//             }
-            
-//         }
-        
-        
-//     }
-// }
+.topsearch{
+    height: 90px;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+}
 
 
 //二级菜单分类

@@ -48,6 +48,7 @@ gulp.task("html",()=>{
 gulp.task("watch",()=>{
     gulp.watch("*.html",["html"]);
     gulp.watch("sass/*.scss",["html","sass"]);
+    gulp.watch("js/*.js",["html","sass","js"]);
     gulp.watch("*.js",["html","sass","js"])
 })
 
@@ -81,6 +82,6 @@ gulp.task("sass", () =>{
            .pipe(gulp.dest("dist/css"))
 })
 gulp.task("js",()=>{
-    return gulp.src(["*.js"])
-    .pipe(gulp.dest("dist/"))
+    return gulp.src(["js/*.js"])
+    .pipe(gulp.dest("dist/js"))
 })

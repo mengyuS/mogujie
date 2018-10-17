@@ -71,4 +71,17 @@ $(".putong").on("click",function(){
         "color": "#3c3c3c"
     })
 })
+
+
+
+$(".right-bottom .big").on("mouseenter",function(){
+    $(this).stop().animate({
+        top : -8
+    })
+})
+$(".right-bottom .big").on("mouseleave",function(){
+    $(this).stop().animate({
+        top : 0 
+    })
+})
    

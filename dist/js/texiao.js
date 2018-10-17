@@ -229,3 +229,215 @@ second.innerHTML=(ssecond);
       })
       banner.autoPlay();
   })
+
+  //querySelector封装
+  function ss(s){
+    var all=document.querySelectorAll(s);
+    if(all.length>1){
+        return all;
+    }
+    return !all[0] ? null : all[0];
+}
+
+//   女鞋&包包
+// 左边轮播图
+           var owrap = document.getElementsByClassName("left-img");
+            var imglist = ss(".shoes-ul1 li");
+            // var spanlist = ss("#btn2 span")
+            console.log(imglist.length);
+            
+	         var nowindex = 0;
+    
+           //封装函数： 改变li的classname属性
+            function move(){
+                for(var i = 0 ; i<imglist.length; i++){
+                    imglist[i].className="";
+                
+                }
+                imglist[nowindex].className="active";
+
+            }
+           //自动播放：
+            var time = setInterval(function(){
+                if(nowindex == imglist.length-1){
+                            nowindex=0
+                        }else{
+                            nowindex++;
+                        }
+                        move();
+            },2000);
+
+    //女鞋中间轮播图
+            function Bannershoes(){}
+            $.extend(Bannershoes.prototype,{
+                init:function(options){
+                    // 所有的图片;
+                   this.item_list = $(options.item_list);
+              
+                   this.span_list = $(options.span_list);
+                   this.nowIndex = 0;
+                   // 有多少元素;
+                   this.item_num = this.item_list.length;
+                   
+    
+                   this.ul = $(".shoes-ul2");
+    
+                   // 获取列表中第一个元素的宽度值;
+                   this.itemwidth = this.item_list.width();
+    
+                   this.bindEvent();
+    
+                },
+                bindEvent: function(){
+                  
+    
+                    this.span_list.mouseover($.proxy(this.toIndex,this))
+                },
+               
+                
+                toIndex : function(event){
+                    var target = event.target || event.scrElement;
+    
+                    this.nowIndex = $(target).index();
+                    this.animate()
+    
+    
+                },
+                animate : function(){
+                    this.ul.stop().animate({
+                        left: -this.nowIndex * 670
+                    })
+                   
+                    var index = this.nowIndex == this.item_num -1 ? 0 : this.nowIndex;
+                    this.span_list.eq(index).addClass("active")
+                    .siblings("span").removeClass("active")
+    
+    
+                },
+                autoPlay : function(){
+                    this.time = setInterval(function(){
+                        // this.next()
+                        if(this.nowIndex == this.item_num-1){
+                            this.nowIndex = 1;
+                            this.ul.css({
+                                left: 0
+                            })
+                        }else{
+                            this.nowIndex ++;
+                        }
+                        this.animate();
+                    }.bind(this),3000)
+    
+                }
+            })
+    
+             var banner = new Bannershoes();
+    
+                banner.init({
+                    item_list : ".shoes-ul2 li",
+                    span_list : ".spanlist span" 
+                })
+                banner.autoPlay();
+
+// 男友&运动
+
+// 左边轮播图
+var owrap2 = document.getElementsByClassName("left-img");
+var imglist2 = ss(".boy-ul1 li");
+
+// console.log(imglist);
+
+ var nowindex2 = 0;
+
+//封装函数： 改变li的classname属性
+function move2(){
+    for(var i = 0 ; i<imglist2.length; i++){
+        imglist2[i].className="";
+    
+    }
+    imglist2[nowindex2].className="active";
+
+}
+//自动播放：
+var time = setInterval(function(){
+    if(nowindex2==imglist2.length-1){
+                nowindex2=0
+            }else{
+                nowindex2++;
+            }
+            move2();
+},2000);
+
+//男友中间轮播图
+function Bannerboy(){}
+$.extend(Bannerboy.prototype,{
+    init:function(options){
+        // 所有的图片;
+       this.item_list = $(options.item_list);
+  
+       this.span_list = $(options.span_list);
+       this.nowIndex = 0;
+       // 有多少元素;
+       this.item_num = this.item_list.length;
+       
+
+       this.ul = $(".boy-ul2");
+
+       // 获取列表中第一个元素的宽度值;
+       this.itemwidth = this.item_list.width();
+
+       this.bindEvent();
+
+    },
+    bindEvent: function(){
+      
+
+        this.span_list.mouseover($.proxy(this.toIndex,this))
+    },
+   
+    
+    toIndex : function(event){
+        var target = event.target || event.scrElement;
+
+        this.nowIndex = $(target).index();
+        this.animate()
+
+
+    },
+    animate : function(){
+        this.ul.stop().animate({
+            left: -this.nowIndex * 670
+        })
+       
+        var index = this.nowIndex == this.item_num -1 ? 0 : this.nowIndex;
+        this.span_list.eq(index).addClass("active")
+        .siblings("span").removeClass("active")
+
+
+    },
+    autoPlay : function(){
+        this.time = setInterval(function(){
+            // this.next()
+            if(this.nowIndex == this.item_num-1){
+                this.nowIndex = 1;
+                this.ul.css({
+                    left: 0
+                })
+            }else{
+                this.nowIndex ++;
+            }
+            this.animate();
+        }.bind(this),3000)
+
+    }
+})
+
+ var banner = new Bannerboy();
+
+    banner.init({
+        item_list : ".boy-ul2 li",
+        span_list : ".spanlist2 span" 
+    })
+    banner.autoPlay();
+          
+        

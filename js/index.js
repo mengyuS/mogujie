@@ -19,6 +19,9 @@ $(".gotop").on("click",function(){
 $(".bar-right .er p").hide();
 $(".bar-right .er").on("mouseenter",function(){
     $(".bar-right .er p").show();
+    // $(".bar-right .er p").css({
+    //    "z-index":"99"
+    // })
 })
 $(".bar-right .er").on("mouseleave",function(){
     $(".bar-right .er p").hide();

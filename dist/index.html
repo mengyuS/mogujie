@@ -1681,8 +1681,30 @@
     <script src="js/texiao.js"></script>
     <script src="js/pubuliu.js"></script>
     <script src="js/index.js"></script>
+    <script src="js/common.js"></script>
+
+
+    <!-- //详情页跳转 -->
     <script>
-        
+        var olist = document.getElementById("wrap");
+            //事件委托：
+            olist.onclick =function(event){
+                var imglist = document.querySelectorAll("#wrap img");
+                var imgArr = Array.from(imglist);
+                // console.log(imglist)
+                // console.log(imgArr)
+                
+                var e =event || window.event;
+                var target = e.target || e.srcElement;
+                if(imgArr.indexOf(target)!=-1){
+                    // 页面跳转;
+                // 先要储存cookie;
+                    cookie("id",target.getAttribute("data-id"))
+                    location.href="../xiangqing.html"
+                }
+
+
+            }
     </script>
         
    

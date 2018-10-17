@@ -42,7 +42,7 @@
              
                  html +=`
                      <div class="box" >
-                         <img src="${json[i].show.img}" alt="">
+                         <img src="${json[i].show.img}" alt="" data-id=${i}>
                          <div class="describe">
                              <p>${json[i].title}</p>
                              

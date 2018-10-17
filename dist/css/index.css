@@ -1237,7 +1237,8 @@ header {
   color: #fff;
   font-size: 12px;
   background: #202020;
-  padding-top: 50px; }
+  padding-top: 50px;
+  height: 100%; }
   .bar-right div {
     position: relative;
     padding: 4px 4px 0;
@@ -1255,6 +1256,8 @@ header {
         display: block;
         background-image: url(../images/1.png);
         background-repeat: no-repeat; }
+  .bar-right div:hover {
+    background: #e70404; }
   .bar-right .goodscar a i {
     background-position: -271px -129px; }
   .bar-right .youhui i {
@@ -1263,3 +1266,89 @@ header {
     background-position: -271px -219px; }
   .bar-right .zuji i {
     background-position: -271px -189px; }
+  .bar-right .er i {
+    background: url(../images/bar-er.png);
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-top: 7px;
+    margin-left: 3px; }
+  .bar-right .er p {
+    position: absolute;
+    width: 181px;
+    height: 200px;
+    left: -180px;
+    top: -13px; }
+  .bar-right .gotop {
+    position: fixed;
+    bottom: 0;
+    background: #202020;
+    z-index: 5; }
+    .bar-right .gotop i {
+      background-position: -270px -279px; }
+
+footer {
+  overflow: hidden;
+  width: 100%;
+  min-height: 180px;
+  margin-top: 0;
+  padding-top: 50px;
+  padding-bottom: 60px; }
+  footer .content {
+    width: 1200px;
+    min-height: 180px;
+    font-size: 12px;
+    margin: 0 auto; }
+    footer .content .top {
+      width: 100%;
+      color: #333;
+      border-bottom: 2px solid #FF5777; }
+      footer .content .top div {
+        height: 100px;
+        float: left;
+        width: 25%; }
+        footer .content .top div h1 {
+          padding-left: 20px;
+          width: 78%;
+          font-size: 14px;
+          margin-left: 25px;
+          margin-bottom: 10px;
+          height: 25px;
+          line-height: 25px;
+          overflow: hidden;
+          color: #666;
+          font-weight: bold; }
+        footer .content .top div .last li {
+          width: 64px; }
+        footer .content .top div ul {
+          padding-left: 20px;
+          width: 214px; }
+          footer .content .top div ul li {
+            display: inline-block;
+            width: 80px;
+            height: 20px;
+            line-height: 20px; }
+            footer .content .top div ul li a {
+              color: #999; }
+    footer .content .mid {
+      min-height: 20px;
+      margin-top: 10px;
+      overflow: hidden; }
+      footer .content .mid ul {
+        float: left; }
+        footer .content .mid ul li {
+          float: left;
+          width: 80px;
+          height: 20px;
+          line-height: 20px; }
+          footer .content .mid ul li a {
+            color: #666; }
+      footer .content .mid p {
+        line-height: 20px; }
+    footer .content .bottom {
+      margin-bottom: 8px;
+      line-height: 27px;
+      color: #999; }
+      footer .content .bottom p span {
+        display: block;
+        line-height: 27px; }

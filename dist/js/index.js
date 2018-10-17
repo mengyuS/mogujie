@@ -8,6 +8,24 @@ $("ul li").on("mouseleave",function(){
     $(this).children("ol").hide();
 })
 
+
+//右侧导航条
+//回到顶部
+$(".gotop").hide();
+$(".gotop").on("click",function(){
+    document.body.top =0;
+})
+//右侧导航二维码鼠标移入出现
+$(".bar-right .er p").hide();
+$(".bar-right .er").on("mouseenter",function(){
+    $(".bar-right .er p").show();
+})
+$(".bar-right .er").on("mouseleave",function(){
+    $(".bar-right .er p").hide();
+})
+
+
+
 //搜索框二级菜单
 $(".search-kind ul").hide();
 $(".search-kind").on("mouseenter",function(){
@@ -24,11 +42,13 @@ onscroll = function(event){
     var e =event || window.event;
     var scrollTop = this.document.body.scrollTop || this.document.documentElement.scrollTop;
     if(scrollTop>=500){
-     $(".topsearch").show();         
+     $(".topsearch").show();  
+     $(".gotop").show();       
      
     }
     if(scrollTop<500){
-        $(".topsearch").hide(); 
+        $(".topsearch").hide();
+        $(".gotop").hide();   
     }
 }
 //顶部搜索框二级菜单显示与隐藏；
@@ -40,6 +60,7 @@ $(".search-left1").on("mouseenter",function(){
 $(".search-left1").on("mouseleave",function(){
     $(".search-left1 .nav").hide();
 })
+
 
 
 

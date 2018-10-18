@@ -283,11 +283,54 @@ header{
             width: 400px;
             height: 600px;
             float: left;
+            position: relative;
+            .frame{
+                width: 100px;
+                height: 100px;
+                box-shadow: 0 0 5px #000;
+                border-radius: 5px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: none;
+                // background: url(images/timg.jpg) no-repeat;
+                // background-size: 400px 600px;
+            }
+            .film{
+                width: 400px;
+                height: 600px;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index:999;
+                // cursor: none;
+            }
+
             img{
                 width: 400px;
                 height: 600px;;
             }
         }
+        .big{
+            width: 600px;
+            height: 600px;
+            box-shadow: 0 0 5px #000;
+            float: left;
+            overflow: hidden;
+            margin-left: 100px;
+            display: none;
+            position: relative;
+            position: absolute;
+            z-index: 99;
+            left: 320px;
+            top:0;
+            img{
+                width: 1600px;
+                height: 3600px;
+                position: absolute;
+            }
+        }
+       
         .introduce{
             width: 537px;
             height: 100%;
@@ -298,7 +341,6 @@ header{
                 width: 100%;
                 margin-bottom: 15px;
                 line-height: 25px;
-                // height: 50px;
                 font-weight: bold;
                 font-size: 24px;
             }

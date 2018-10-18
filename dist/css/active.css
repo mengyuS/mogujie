@@ -1,0 +1,89 @@
+body {
+  background-color: #fff; }
+
+.kind {
+  width: 100%;
+  padding-top: 30px;
+  border-top: 2px solid #f46; }
+  .kind .kind-content {
+    width: 1198px;
+    border: 1px solid #e5e5e5;
+    margin: 0 auto; }
+    .kind .kind-content .nav {
+      border-bottom: 1px solid #e5e5e5;
+      padding-left: 15px;
+      background-color: #fafafa;
+      position: relative; }
+      .kind .kind-content .nav ul {
+        height: 38px; }
+        .kind .kind-content .nav ul li {
+          width: 65px;
+          height: 39px;
+          line-height: 39px;
+          cursor: pointer;
+          text-align: center;
+          display: block;
+          float: left;
+          color: #333;
+          font-size: 16px; }
+        .kind .kind-content .nav ul .on {
+          background-color: #fff;
+          border-top: 2px solid #f46;
+          border-left: 1px solid #e5e5e5;
+          border-right: 1px solid #e5e5e5; }
+    .kind .kind-content .type {
+      padding: 30px 20px 20px 30px;
+      font-size: 0;
+      height: 230px; }
+      .kind .kind-content .type .r-img {
+        display: block;
+        width: 200px;
+        height: 240px;
+        float: right;
+        padding-left: 20px;
+        border-left: 1px dashed #e5e5e5;
+        margin-top: -10px; }
+      .kind .kind-content .type .d1 {
+        width: 200px;
+        height: 240px;
+        float: left;
+        width: 435px;
+        height: 96px;
+        overflow: hidden;
+        margin-right: 25px;
+        margin-bottom: 30px; }
+        .kind .kind-content .type .d1 h1 {
+          height: 18px;
+          line-height: 18px;
+          overflow: hidden;
+          font-family: Microsoft Yahei;
+          font-size: 16px;
+          color: #333; }
+        .kind .kind-content .type .d1 div {
+          margin-top: 10px;
+          vertical-align: top;
+          height: 68px;
+          overflow: hidden; }
+          .kind .kind-content .type .d1 div img {
+            float: left;
+            height: 66px;
+            border: 1px solid #f2f2f2;
+            background: #fff;
+            width: 66px; }
+          .kind .kind-content .type .d1 div ul li {
+            margin-bottom: 4px;
+            float: left; }
+            .kind .kind-content .type .d1 div ul li a {
+              display: block;
+              line-height: 11px;
+              padding: 4px 16px;
+              color: #333;
+              overflow: hidden;
+              font-size: 12px;
+              border-right: 1px solid #e5e5e5;
+              margin-bottom: 4px; }
+            .kind .kind-content .type .d1 div ul li a:hover {
+              text-decoration: underline;
+              color: #333; }
+            .kind .kind-content .type .d1 div ul li .red {
+              color: #f46; }

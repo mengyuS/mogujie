@@ -72,7 +72,7 @@
     <!-- <script src="jquery.js"></script> -->
     <script src="js/jquery.cookie.js"></script>
     <script src="js/index.js"></script>
-    <script src="js/texiao.js"></script>
+    <!-- <script src="js/texiao.js"></script> -->
     <script src="js/ajax.js"></script>
     <script>
          var username = document.getElementById("name");
@@ -80,21 +80,34 @@
         var obtn = document.getElementById("btn");
 
         obtn.onclick = function(){
-            var url="http://localhost:8888/proxy/localhost/php/login.php";
-            ajaxPost(url,`username=${username.value}&password=${password.value}`)
-            .then( function(res){
-                // console.log(res);
-                if(res=="登录成功"){
+            // var url="http://localhost:8888/proxy/localhost/php/login.php";
+            // ajaxPost(url,`username=${username.value}&password=${password.value}`)
+            // .then( function(res){
+            //     // console.log(res);
+            //     if(res=="登录成功"){
+            //         location.href="index.html"
+            //     }else{
+            //         alert(res)
+            //     }
+            $.ajax({
+            url:"http://localhost:8888/proxy/localhost/php/login.php",
+            type:"GET",
+            data:`username=${username.value}&password=${password.value}`,
+            success:function(res){
+                   if(res=="登录成功"){
                     location.href="index.html"
                 }else{
                     alert(res)
                 }
+            }
 
 
           
 
             })
         }
+        
+
     </script>
 </body>
 </html>

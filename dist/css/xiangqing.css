@@ -272,10 +272,44 @@ header {
     .content .content-left .left-img {
       width: 400px;
       height: 600px;
-      float: left; }
+      float: left;
+      position: relative; }
+      .content .content-left .left-img .frame {
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 5px #000;
+        border-radius: 5px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none; }
+      .content .content-left .left-img .film {
+        width: 400px;
+        height: 600px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 999; }
       .content .content-left .left-img img {
         width: 400px;
         height: 600px; }
+    .content .content-left .big {
+      width: 600px;
+      height: 600px;
+      box-shadow: 0 0 5px #000;
+      float: left;
+      overflow: hidden;
+      margin-left: 100px;
+      display: none;
+      position: relative;
+      position: absolute;
+      z-index: 99;
+      left: 320px;
+      top: 0; }
+      .content .content-left .big img {
+        width: 1600px;
+        height: 3600px;
+        position: absolute; }
     .content .content-left .introduce {
       width: 537px;
       height: 100%;

@@ -34,7 +34,7 @@
         <!-- <script src="jquery.js"></script> -->
         <script src="js/jquery.cookie.js"></script>
         <script src="js/index.js"></script>
-        <script src="js/texiao.js"></script>
+        <!-- <script src="js/texiao.js"></script> -->
         <script src="js/ajax.js"></script>
         <script>
                 var user = document.getElementById("usename");
@@ -141,21 +141,33 @@
                  }
          
                  obtn.onclick = function(){
-                     var url="http://localhost:8888/proxy/localhost/php/register.php";
-                     ajaxPost(url,`username=${user.value}&password=${pwd1.value}`)
-                     .then( function(res){
-                         //console.log(res);
-                         if(res=="注册成功"){
-                             alert(res);
-                             location.href="login.html"
-                         }else{
-                             alert(res)
-                         }
-         
-         
-                   
-         
-                     })
+                    //  var url="http://localhost:8888/proxy/localhost/php/register.php";
+                    //  ajaxPost(url,`username=${user.value}&password=${pwd1.value}`)
+                    //  .then( function(res){
+                    //      //console.log(res);
+                    //      if(res=="注册成功"){
+                    //          alert(res);
+                    //          location.href="login.html"
+                    //      }else{
+                    //          alert(res)
+                    //      }          
+                    //  })
+                     $.ajax({
+                        url:"http://localhost:8888/proxy/localhost/php/register.php",
+                        type:"GET",
+                        data:`username=${user.value}&password=${pwd1.value}`,
+                        success:function(res){
+                            if(res=="注册成功"){
+                                location.href="login.html"
+                            }else{
+                                alert(res)
+                            }
+                        }
+
+
+          
+
+            })
                  }
          
          

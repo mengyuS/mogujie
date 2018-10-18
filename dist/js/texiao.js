@@ -8,7 +8,7 @@ function nowtime(){
     var d=new Date();
     var now=d.getTime();
 
-    var d2=new Date("2018/10/19 00:00:00");
+    var d2=new Date("2018/10/22 00:00:00");
     var future=d2.getTime();
  
     var n=future-now;

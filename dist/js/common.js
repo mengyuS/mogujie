@@ -24,7 +24,7 @@ function cookie(name,value,options){
 
 
      function removecookie(name,path){
-            setCookie(name,"",{
+            cookie(name,"",{
                 path: path ? path : "",
                 expires:-1
 

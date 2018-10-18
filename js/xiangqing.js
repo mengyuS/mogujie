@@ -45,20 +45,25 @@
                         var nowprice2 = document.getElementById("nowprice2")
                         // var nowprice = document.getElementsByClassName("nowprice");
                         var delprice = document.getElementById("delprice");
+                        var bigimg = document.getElementById("bigimg");
+                       
                         // var i="";
                         //判断cookie中是否有id
                         if( cookie("id")){
                             i=cookie("id");   //cookie("id")一个参数，是查找，返回value
                             console.log(i);
                             oimg.src = json[i].show.img;
-                            
+                            bigimg.src = json[i].showLarge.img;
                             op.innerHTML = json[i].title;
                             nowprice.innerHTML = json[i].price;
                             nowprice2.innerHTML = json[i].price;
                             delprice.innerHTML = json[i].orgPrice;
-                           // console.log(oimg.src,nowprice.innerHTML,delprice.innerHTML);
+                           
+
+                          
                             
                         }
+                        // removecookie("id","/")
                     }
                             
                             
@@ -68,3 +73,52 @@
     
                  var waterfall = new WaterFall();
                  waterfall.init();
+
+
+// 放大镜
+$(".frame").hide();
+// $(".big").hide();
+$(".small").on("mouseover",function(){
+    $(".frame").show();
+    $(".big").show();
+    // $("#img").css({
+    //     "opctity":"0.5"
+    // })
+})
+$(".small").on("mouseout",function(){
+    $(".frame").hide();
+    $(".big").hide();
+})
+$(".small").on("mousemove",function(event){
+    // $("#small")[0].onmouseover = function(event ){
+    var e = event || window.event;
+    var offsetX = e.offsetX;
+    var offsetY = e.offsetY;
+    var nleft = offsetX-50;
+    var ntop = offsetY -50;
+   //边界检测：
+   //最小值：
+    nleft=nleft <0 ? 0: nleft;
+    ntop = ntop<0 ? 0: ntop;
+    //最大值：
+    var maxleft =$(".small").width()-$(".frame").width();
+    var maxtop = $(".small").height()-$(".frame").height();
+    nleft=nleft> maxleft ? maxleft : nleft;
+    ntop = ntop >maxtop ? maxtop : ntop;
+    
+    $(".frame").css({"left":nleft +"px"});
+    $(".frame").css({"top":ntop +"px"});
+
+    //求放大镜的比例：
+    var n = $("#bigimg").width()/$(".small").width();
+    var n2 =  $("#bigimg").height()/$(".small").height();
+
+    $("#bigimg").css({"left":-nleft*n +"px"});
+    $("#bigimg").css({"top":- ntop*n2 +"px"});
+
+})
+
+     
+    
+   
+

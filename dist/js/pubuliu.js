@@ -36,13 +36,13 @@
      renderPage:function(json1){
         //console.log(json1.result.wall.list);
         var json=json1.result.wall.list;
-        // console.log(json)
+      
          var html="";
          for( var i=0; i<json.length; i++){
-             
+            // console.log(json,this.page,i)
                  html +=`
                      <div class="box" >
-                         <img src="${json[i].show.img}" alt="" data-id=${i}>
+                         <img src="${json[i].show.img}" alt="" data-id="${i}">
                          <div class="describe">
                              <p>${json[i].title}</p>
                              

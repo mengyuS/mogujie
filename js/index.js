@@ -81,6 +81,7 @@ $(".search-left1").on("mouseleave",function(){
     $(this).children(".erji").hide();
 })
 
+//跳转登录界面
 $(".login").click(function(){
     location.href="login.html"
 })
@@ -138,4 +139,10 @@ $(".right-bottom .big").on("mouseleave",function(){
 $(".describe em").hide();
 $(".box").on("mouseenter",function(){
     $(".describe em").show();
+})
+
+
+//跳转到活动页
+$(".girl-bottom .left-img").click(function(){
+    location.href="active.html"
 })

@@ -1584,7 +1584,7 @@ header{
             text-align: center;
             height: 15px;
             border-radius: 50%;
-            left: 20px;
+            left: 15px;
             top: 0;
             font-weight: bold;
             color: #ef2f23;
@@ -1594,7 +1594,7 @@ header{
             width: 180px;
             position: absolute;
             z-index: 999;
-            left: -180px;
+            left: -230px;
             top:0;
 
             li{
@@ -1618,11 +1618,16 @@ header{
                     text-overflow: ellipsis;
                 }
                 strong{
+                    margin-left: 20px;
                     display: block;
                     float: left;
                     line-height: 60px;
                     padding:0 5px;
                     color: yellowgreen;
+                }
+                i{
+                    line-height: 60px;
+                    cursor: pointer;
                 }
             }
         }

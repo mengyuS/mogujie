@@ -1282,7 +1282,7 @@ header {
     text-align: center;
     height: 15px;
     border-radius: 50%;
-    left: 20px;
+    left: 15px;
     top: 0;
     font-weight: bold;
     color: #ef2f23; }
@@ -1290,7 +1290,7 @@ header {
     width: 180px;
     position: absolute;
     z-index: 999;
-    left: -180px;
+    left: -230px;
     top: 0; }
     .bar-right .goodscar .goods-list li {
       width: 280px;
@@ -1310,11 +1310,15 @@ header {
         white-space: nowrap;
         text-overflow: ellipsis; }
       .bar-right .goodscar .goods-list li strong {
+        margin-left: 20px;
         display: block;
         float: left;
         line-height: 60px;
         padding: 0 5px;
         color: yellowgreen; }
+      .bar-right .goodscar .goods-list li i {
+        line-height: 60px;
+        cursor: pointer; }
   .bar-right .youhui i {
     background-position: -271px -159px; }
   .bar-right .money i {

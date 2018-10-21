@@ -14,11 +14,11 @@
                         .done(function(res){
                              // deferred 的 done 回调 this指向的都是 jquery 对象本身
                             this.renderPage(res);
-                            // this.showList
+                            
                         })
                         this.bindEvent();
                         this.listSum();
-                       
+                        this.showList();
     
                     },
                     //加载数据
@@ -57,8 +57,8 @@
                         if( cookie("id")){
                             i=cookie("id");   //cookie("id")一个参数，是查找，返回value
                             console.log(i);
-                            oimg.src = json[i].show.img;
-                            bigimg.src = json[i].showLarge.img;
+                            oimg.src= json[i].show.img;
+                            bigimg.src= json[i].showLarge.img;
                             op.innerHTML = json[i].title;
                             nowprice.innerHTML = json[i].price;
                             nowprice2.innerHTML = json[i].price;
@@ -87,6 +87,12 @@
                         $(".buy").on("click","span",this.addCar.bind(this));
         
                         $(".goodscar").on("mouseenter",this.showList.bind(this));
+                        $(".goodscar").on("mouseleave",function(){
+                            $(".goodscar ul").hide();
+                        })
+                        $(".goodscar").on("mouseenter",function(){
+                            $(".goodscar ul").show();
+                        })
                        
 
                             
@@ -147,9 +153,9 @@
                         this.listSum();
                     }
                     ,
-                    showList:function(event){
+                    showList:function(){
                         // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
-                        var target = event.target;
+                        // var target = event.target;
         
                         // if(target != $(".goodscar>div")[0]) return 0;
         
@@ -161,30 +167,47 @@
                         .done(function(res){
                             
                             this.json=res.result.wall.list;
-                        })
-                       
-                       
-                        var html = "";
-                        // for 购物车里有多少商品就拼接多少个;
-                        for(var i = 0 ; i < cookieArray.length ; i ++){
-                            // console.log(cookieArray[i]);
-                            // for 判断哪一个商品是购物车里的商品;
-                            for(var j = 0 ; j < this.json.length ; j ++){
-                                if(cookieArray[i].id == this.json[j].iid){
-                                    html += `<li data-id="${cookieArray[i].iid}">
-                                                <img src="${this.json[j].show.img}" alt="">
-                                                <h3>${this.json[j].title}</h3>
-                                                <strong>${cookieArray[i].num}</strong>
-                                            </li>`;
-                                    // break;
+                            var html = "";
+                            // for 购物车里有多少商品就拼接多少个;
+                            for(var z = 0 ; z < cookieArray.length ; z ++){
+                                // console.log(cookieArray[i]);
+                                // for 判断哪一个商品是购物车里的商品;
+                                for(var j = 0 ; j < this.json.length ; j ++){
+                                    if(cookieArray[z].id == this.json[j].iid){
+                                        html += `<li data-id="${cookieArray[z].iid}">
+                                                    <img src="${this.json[j].show.img}" alt="">
+                                                    <h3>${this.json[j].title}</h3>
+                                                    <strong>${cookieArray[z].num}</strong>
+                                                    <i class="del" onclick=remove(${z})>删除</i>
+                                                </li>`;
+                                        // break;
+                                    }
                                 }
                             }
-                        }
-                        
-                        $(".goods-list").html(html);
+                            
+                            $(".goods-list").html(html);
+                           
+                            // $(".del").on("click",function(event){
+                            
+                            //     $(this).css({
+                            //         "color":"red"
+                            //     })
+                            //     var cookie;
+                            //     if(!(cookie = $.cookie("shopCar"))){ return 0; };
+                            //     var cookieArray = JSON.parse(cookie);
+                            //     cookieArray.splice(i,1);
+                            //     $.cookie("shopCar",JSON.stringify(cookieArray));
+                            //     this.showList().bind(this);
+                            //     this.listSum().bind(this);
+                            // })
+                           
+                           
+                        })
+    
                     },
                     listSum:function(){
                         var cookie;
+                      
                         if(!(cookie = $.cookie("shopCar"))){ 
                             //find后代选择器；
                             $(".goodscar").find("b").html(0);
@@ -201,11 +224,23 @@
                 })
                             
                             
-           
+   
             
     
                  var waterfall = new WaterFall();
                  waterfall.init();
+                
+                 //购物车删除
+                 function remove(z){
+                    var cookie;
+                    if(!(cookie = $.cookie("shopCar"))){ return 0; };
+                    var cookieArray = JSON.parse(cookie);
+                    cookieArray.splice(z,1);
+                    $.cookie("shopCar",JSON.stringify(cookieArray));
+                    waterfall.showList();
+                    waterfall.listSum();
+                 }
+                
 
 
 // 放大镜

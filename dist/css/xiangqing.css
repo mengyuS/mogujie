@@ -599,7 +599,8 @@ header {
         color: yellowgreen; }
       .bar-right .goodscar .goods-list li i {
         line-height: 60px;
-        cursor: pointer; }
+        cursor: pointer;
+        color: #ef2f23; }
   .bar-right .youhui i {
     background-position: -271px -159px; }
   .bar-right .money i {

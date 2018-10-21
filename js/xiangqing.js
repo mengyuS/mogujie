@@ -66,7 +66,7 @@
                         }
                         // removecookie("id","/")
                         console.log(json[i].iid)
-
+                        //购物车按钮加载
                         var html="";
                     
                         html +=`<p class="pin">
@@ -85,7 +85,7 @@
                     bindEvent:function(){
                         //事件委托
                         $(".buy").on("click","span",this.addCar.bind(this));
-        
+                        $(".goodscar ul").hide();
                         $(".goodscar").on("mouseenter",this.showList.bind(this));
                         $(".goodscar").on("mouseleave",function(){
                             $(".goodscar ul").hide();
@@ -93,23 +93,7 @@
                         $(".goodscar").on("mouseenter",function(){
                             $(".goodscar ul").show();
                         })
-                       
-
-                            
-                       
-                        // $(".shopCar>div").on("mouseleave",function(){
-                        //     $(".goods-list").children().remove();
-                        // });
-                        // $(".shopCar>div").on("click",function(event){
-                        //     var target = event.target ; 
-                        //     //target是dom对象，后面jquery对象变成dom对象
-                        //     if(target != $(".shopCar>div")[0]) return 0;
-        
-                        //     $.removeCookie("shopCar");
-                        //     //手动触发   执行鼠标移出事件;
-                        //     $(".shopCar>div").triggerHandler("mouseleave");
-                        //     this.listSum();
-                        // }.bind(this));
+                
                     },
                     addCar:function(event){
                         // 我怎么知道把谁加入到购物车之中那?;
@@ -186,22 +170,7 @@
                             }
                             
                             $(".goods-list").html(html);
-                           
-                            // $(".del").on("click",function(event){
-                            
-                            //     $(this).css({
-                            //         "color":"red"
-                            //     })
-                            //     var cookie;
-                            //     if(!(cookie = $.cookie("shopCar"))){ return 0; };
-                            //     var cookieArray = JSON.parse(cookie);
-                            //     cookieArray.splice(i,1);
-                            //     $.cookie("shopCar",JSON.stringify(cookieArray));
-                            //     this.showList().bind(this);
-                            //     this.listSum().bind(this);
-                            // })
-                           
-                           
+                       
                         })
     
                     },

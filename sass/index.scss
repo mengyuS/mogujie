@@ -96,6 +96,21 @@ header{
             } 
             .goodscar{
                 background: url(../images/1.png) 8px -420px no-repeat;
+                b{
+                    display: block;
+                    position: absolute;
+                    background: #ddd;
+                    color: #000;
+                    width: 15px;
+                    text-align: center;
+                    height: 15px;
+                    line-height: 15px;
+                    border-radius: 50%;
+                    left: 20px;
+                    top: 0;
+                    font-weight: bold;
+                    color: #ef2f23;
+                }
             }
             .fuwu{
                 padding-right: 10px;
@@ -1559,6 +1574,56 @@ header{
         a{
             i{               
                 background-position: -271px -129px;
+            }
+        }
+        b{
+            position: absolute;
+            background: #ddd;
+            color: #000;
+            width: 15px;
+            text-align: center;
+            height: 15px;
+            border-radius: 50%;
+            left: 20px;
+            top: 0;
+            font-weight: bold;
+            color: #ef2f23;
+        }
+        
+        .goods-list{
+            width: 180px;
+            position: absolute;
+            z-index: 999;
+            left: -180px;
+            top:0;
+
+            li{
+                width: 280px;
+                height: 60px;
+                background: rgba(0,0,0,.5);
+
+                img{
+                    display: block;
+                    height: 60px;
+                    float: left;
+                    width: 40px;
+                }
+                h3{
+                    width: 100px;
+                    float: left;
+                    line-height: 60px;
+                    padding-left: 10px;
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+                strong{
+                    display: block;
+                    float: left;
+                    line-height: 60px;
+                    padding:0 5px;
+                    color: yellowgreen;
+                }
             }
         }
     }

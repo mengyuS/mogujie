@@ -14,9 +14,10 @@
                         .done(function(res){
                              // deferred 的 done 回调 this指向的都是 jquery 对象本身
                             this.renderPage(res);
+                            // this.showList
                         })
                         this.bindEvent();
-                        // this.listSum();
+                        this.listSum();
                        
     
                     },
@@ -75,7 +76,7 @@
                                    现价单独购买
                                </p>
                                <span class="shopcar" goods-id="${json[i].iid}">
-                                   <img src="images/car1.png">
+                                   <img src="images/car1.png" goods-id="${json[i].iid}">
                                 </span>
                             `
                   
@@ -85,7 +86,11 @@
                         //事件委托
                         $(".buy").on("click","span",this.addCar.bind(this));
         
-                        // $(".shopCar>div").on("mouseenter",this.showList.bind(this));
+                        $(".goodscar").on("mouseenter",this.showList.bind(this));
+                       
+
+                            
+                       
                         // $(".shopCar>div").on("mouseleave",function(){
                         //     $(".goods-list").children().remove();
                         // });
@@ -104,7 +109,7 @@
                         // 我怎么知道把谁加入到购物车之中那?;
                         var target = event.target ;
                         var goodsId = $(target).attr("goods-id");
-                        console.log(goodsId,$(".shopcar"))
+                        console.log(target,goodsId)
                        
                         var cookie;
                         if((cookie = $.cookie("shopCar"))){
@@ -139,52 +144,59 @@
                             $.cookie("shopCar",`[{"id":"${goodsId}","num":"1"}]`);
                         }
                         console.log($.cookie("shopCar"));
-                        // this.listSum();
+                        this.listSum();
                     }
                     ,
-                    // showList:function(event){
-                    //     // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
-                    //     var target = event.target;
+                    showList:function(event){
+                        // 判定是否存在购物车,如果不存在购物车就没必要拼接列表了;
+                        var target = event.target;
         
-                    //     if(target != $(".shopCar>div")[0]) return 0;
+                        // if(target != $(".goodscar>div")[0]) return 0;
         
-                    //     var cookie;
-                    //     if(!(cookie = $.cookie("shopCar"))){ return 0; };
-                    //     var cookieArray = JSON.parse(cookie);
-        
-                    //     var html = "";
-                    //     // for 购物车里有多少商品就拼接多少个;
-                    //     for(var i = 0 ; i < cookieArray.length ; i ++){
-                    //         // console.log(cookieArray[i]);
-                    //         // for 判断哪一个商品是购物车里的商品;
-                    //         for(var j = 0 ; j < this.json.length ; j ++){
-                    //             if(cookieArray[i].id == this.json[j].id){
-                    //                 html += `<li data-id="${cookieArray[i].id}">
-                    //                             <img src="${this.json[j].images.small}" alt="">
-                    //                             <h3>${this.json[j].title}</h3>
-                    //                             <strong>${cookieArray[i].num}</strong>
-                    //                         </li>`;
-                    //                 break;
-                    //             }
-                    //         }
-                    //     }
+                        var cookie;
+                        if(!(cookie = $.cookie("shopCar"))){ return 0; };
+                        var cookieArray = JSON.parse(cookie);
+                        //获取数据
+                        this.loadJson()   
+                        .done(function(res){
+                            
+                            this.json=res.result.wall.list;
+                        })
+                       
+                       
+                        var html = "";
+                        // for 购物车里有多少商品就拼接多少个;
+                        for(var i = 0 ; i < cookieArray.length ; i ++){
+                            // console.log(cookieArray[i]);
+                            // for 判断哪一个商品是购物车里的商品;
+                            for(var j = 0 ; j < this.json.length ; j ++){
+                                if(cookieArray[i].id == this.json[j].iid){
+                                    html += `<li data-id="${cookieArray[i].iid}">
+                                                <img src="${this.json[j].show.img}" alt="">
+                                                <h3>${this.json[j].title}</h3>
+                                                <strong>${cookieArray[i].num}</strong>
+                                            </li>`;
+                                    // break;
+                                }
+                            }
+                        }
                         
-                    //     $(".goods-list").html(html);
-                    // },
-                    // listSum:function(){
-                    //     var cookie;
-                    //     if(!(cookie = $.cookie("shopCar"))){ 
-                    //         //find后代选择器；
-                    //         $(".shopCar").find("span").html(0);
-                    //         return 0;
-                    //     };
-                    //     var cookieArray = JSON.parse(cookie);
-                    //     var sum = 0;
-                    //     for(var i = 0 ; i < cookieArray.length ; i ++){
-                    //         sum += Number(cookieArray[i].num);
-                    //     }
-                    //     $(".shopCar").find("span").html(sum);
-                    // }
+                        $(".goods-list").html(html);
+                    },
+                    listSum:function(){
+                        var cookie;
+                        if(!(cookie = $.cookie("shopCar"))){ 
+                            //find后代选择器；
+                            $(".goodscar").find("b").html(0);
+                            return 0;
+                        };
+                        var cookieArray = JSON.parse(cookie);
+                        var sum = 0;
+                        for(var i = 0 ; i < cookieArray.length ; i ++){
+                            sum += Number(cookieArray[i].num);
+                        }
+                        $(".goodscar").find("b").html(sum);
+                    }
         
                 })
                             
